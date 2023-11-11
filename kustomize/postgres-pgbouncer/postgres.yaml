@@ -34,3 +34,9 @@ spec:
   proxy:
     pgBouncer:
       image: registry.developers.crunchydata.com/crunchydata/crunchy-pgbouncer:ubi8-1.19-5
+  # https://access.crunchydata.com/documentation/postgres-operator/latest/tutorials/basic-setup/user-management
+  users:
+    - name: antslift-user
+      databases:
+        - antslift_db
+      options: "CREATEDB CREATEROLE"
